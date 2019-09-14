@@ -1,3 +1,26 @@
-{{outlet}}
+<h1>Books</h1>
 
-{{!-- TODO: list the books --}}
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Author
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |book|}}
+            <tr>
+                <td>
+                    {{book.title}}
+                </td>
+                <td>
+                    {{book.author.name}}
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
